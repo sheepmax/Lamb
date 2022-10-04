@@ -1,0 +1,11 @@
+MACRO power_two_vec(num) {
+	${$
+	prev_power = 1
+	loop(i := 0; i++; i < num) {
+		$$(prev_power), $
+		prev_power = prev_power * 2
+	}
+	$$(prev_power)}$
+}
+
+int vec[] = $(power_two_vec(5));

@@ -1,0 +1,4 @@
+Todo:
+- Adding iterators to iterate directly over iterables
+DONE - Add in index assignments for iterables
+- Add in flexible grammar processing for custom syntax

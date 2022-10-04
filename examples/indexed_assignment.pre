@@ -1,0 +1,7 @@
+MACRO plus_one(nums...) {
+	loop(num in nums) {
+		$num
+	}
+}
+
+$(plus_one(1, 2, 3, 4))

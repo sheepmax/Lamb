@@ -1,0 +1,26 @@
+Terminal tokens
+: Strings : "" delimited
+: Numbers : multiple characters and can contain .
+: Operators
+: White space ignored
+: Semicolon used to demark end of line 
+	: Semicolons are treated as a binary operator with very low precedence
+
+Infix operators  :   : Precedences
+: Addition       : + : 1, 1.1
+: Subtraction    : - : 1, 1.1
+: Multiplication : * : 2, 2.1
+: Division       : / : 2, 2.1
+
+Prefix operators :   : Precedences
+: Subtraction    : - : [], 3 
+
+Postfix operators
+: Factorial : ! : 10, []
+
+Keywords:
+: "if" : if (...) {...}
+: "macro" : macro [NAME] (args...) { body... }
+
+Supports () and {}
+

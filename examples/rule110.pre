@@ -1,0 +1,28 @@
+MACRO pattern_converter(pattern) {
+	result = ""
+	loop(i := -1; i++; i < len(pattern)) {
+		result = result + if (pattern[i] == "1") {"#"} else {" "}
+	}
+	result
+}
+
+MACRO repeat(times, str) {
+	loop(i := 0; i++; i <= times) {
+		$$(str)$
+	}
+}
+
+MACRO automata(its, pat) {
+	loop (i := -1; i++; i < its) {
+		$$(pat)
+		pat = " " + pat + " "
+		next_pat = ""
+		loop (j := 0; j++; j < (len(pat) - 1)) { 
+			state = pat[j - 1] + pat[j] + pat[j + 1]
+			next_pat = next_pat + if (state == "###" || state == "#  " || state == "   ") {" "} else {"#"}
+		}
+		pat = next_pat
+	}
+}
+
+$(automata(50, pattern_converter("0001110111$(repeat(5, "00010011011111"))")))
